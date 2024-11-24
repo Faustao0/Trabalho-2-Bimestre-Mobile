@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Aplicativo de Pedido de Vendas"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btCadastroClientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:backgroundTint="#0084FF"
+        android:text="Cadastro Clientes"
+        android:textColor="@color/black">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btPedidosVendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedidos de Vendas"
+        android:layout_gravity="center"
+        android:backgroundTint="#0084FF"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp">
+    </Button>
+
+    <Button
+        android:id="@+id/btPesquisarPedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesquisar Pedidos"
+        android:layout_gravity="center"
+        android:backgroundTint="#0084FF"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp">
+    </Button>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="8dp"
+    tools:context=".view.PedidoVendaActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lista de Itens Pedidos"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="30dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPedidoVenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp" />
+            <TextView
+                android:id="@+id/tvValorTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor Total do Pedido:"
+                android:textSize="20sp"
+                android:textColor="#FF5722"
+                android:layout_marginLeft="17dp"
+                android:visibility="gone"/>
+
+            <RadioGroup
+                android:id="@+id/rgCondicaoPagamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="65dp">
+
+                <RadioButton
+                    android:id="@+id/rbAVista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="À Vista" />
+
+                <RadioButton
+                    android:id="@+id/rbAPrazo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A Prazo" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etQuantidadeParcelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Quantidade de Parcelas"
+                android:inputType="number"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvEnderecoEntrega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enderço de Entrega: "
+                android:textColor="@color/black"
+                android:textSize="18dp"/>
+
+            <Button
+                android:id="@+id/btnConcluirPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Concluir Pedido"
+                android:backgroundTint="#0084FF"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btcadastrarItens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/baseline_add_24"
+            app:tint="@android:color/black"
+            android:backgroundTint="#0084FF" />
+    </FrameLayout>
+</ScrollView>
